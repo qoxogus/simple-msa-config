@@ -19,8 +19,18 @@ spring:
             predicates:
               - Path=/api/{version}/books/**
 
-  kafka:
-    bootstrap-servers: localhost:29092
+  stream:
+    kafka:
+      binder:
+        brokers:
+          - http://localhost:29092
+  bus:
+    trace:
+      enabled: true
+    refresh:
+      enabled: true
+    env:
+      enabled: true
 
 eureka:
   instance:
@@ -38,7 +48,6 @@ management:
       exposure:
         include:
           - "refresh"
-          - "bus-refresh"
   endpoint:
     refresh:
       enabled: true

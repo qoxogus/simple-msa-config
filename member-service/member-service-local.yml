@@ -2,11 +2,22 @@ server:
   port: 8080
 
 refresh-test:
-  word: hi
+  word: bye
 
 spring:
-  kafka:
-    bootstrap-servers: localhost:29092
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - http://localhost:29092
+    bus:
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
 
 eureka:
   instance:

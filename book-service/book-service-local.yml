@@ -2,7 +2,7 @@ server:
   port: 9090
 
 refresh-test:
-  word: bye
+  word: hi
 
 spring:
   cloud:

@@ -2,7 +2,7 @@ server:
   port: 8080
 
 refresh-test:
-  word: bye
+  word: hi
 
 spring:
   kafka:
@@ -24,7 +24,6 @@ management:
       exposure:
         include:
           - "refresh"
-          - "bus-refresh"
   endpoint:
     refresh:
       enabled: true

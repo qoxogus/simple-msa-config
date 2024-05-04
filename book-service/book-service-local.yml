@@ -2,7 +2,11 @@ server:
   port: 9090
 
 refresh-test:
-  word: bye
+  word: hi
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
 
 eureka:
   instance:
@@ -20,6 +24,7 @@ management:
       exposure:
         include:
           - "refresh"
+          - "bus-refresh"
   endpoint:
     refresh:
       enabled: true

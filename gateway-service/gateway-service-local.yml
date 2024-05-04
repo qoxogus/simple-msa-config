@@ -2,7 +2,7 @@ server:
   port: 8000
 
 refresh-test:
-  word: bye
+  word: hi
 
 spring:
   cloud:
@@ -18,6 +18,9 @@ spring:
             uri: lb://BOOK-SERVICE
             predicates:
               - Path=/api/{version}/books/**
+
+  kafka:
+    bootstrap-servers: localhost:29092
 
 eureka:
   instance:
@@ -35,6 +38,7 @@ management:
       exposure:
         include:
           - "refresh"
+          - "bus-refresh"
   endpoint:
     refresh:
       enabled: true

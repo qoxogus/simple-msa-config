@@ -19,18 +19,18 @@ spring:
             predicates:
               - Path=/api/{version}/books/**
 
-  stream:
-    kafka:
-      binder:
-        brokers:
-          - http://localhost:29092
-  bus:
-    trace:
-      enabled: true
-    refresh:
-      enabled: true
-    env:
-      enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - http://localhost:29092
+    bus:
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
 
 eureka:
   instance:
